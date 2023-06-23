@@ -10,3 +10,13 @@
 	gap: 2rem; /* espaçamento entre as colunas */
 	align-items: flex-start; /* fazer com que as colunas fiquem alinhadas no topo, além de fazer com que cada uma tenha o seu height auto*/
 }
+
+@media (max-width: 768px) {
+  html{
+    font-size: 87.5%;
+  }
+  .wrapper {
+    /* vai fazer com que todas colunas ocupem td o espaço da tela */
+    grid-template-columns: 1fr;
+  }
+}

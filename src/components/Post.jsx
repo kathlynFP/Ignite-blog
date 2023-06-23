@@ -52,8 +52,8 @@ export const Post = (props) => {
 
       <div className={styles.commentList}>
 
-        <Comment/>
-        <Comment/>
+        <Comment />
+        <Comment />
 
       </div>
 
