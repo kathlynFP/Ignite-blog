@@ -7,8 +7,8 @@ import styles from './Post.module.css';
 
 
 
-export const Post = (props) => {
-  console.log(props)
+
+export const Post = ({ author, content, publishedAt }) => {
 
   return (
     <article className={styles.post}>
@@ -27,8 +27,14 @@ export const Post = (props) => {
       </header>
 
       <div className={styles.content}>
-        <p>{props.content}</p>
-        <p>Fala galeraa 👋</p>
+        {content.map(line => {
+          if (line.type == 'paragraph') {
+            return <p>{line.content}</p>
+          }
+          else
+          return <a>{line.content}</a>
+        })}
+        {/* <p>Fala galeraa 👋</p>
         <p>Acabei de subir mais um projeto no meu portifa. É um projeto que fiz no NLW Return, evento da Rocketseat. O nome do projeto é DoctorCare 🚀</p>
         <p><a>👉 jane.design/doctorcare</a></p>
         <p>
@@ -36,7 +42,7 @@ export const Post = (props) => {
           <a>#nlw </a>{' '}
           <a>#rocketseat</a>{' '}
 
-        </p>
+        </p> */}
       </div>
 
       <form className={styles.commentForm}>
