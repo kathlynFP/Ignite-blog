@@ -2,6 +2,9 @@ import { Post } from "./components/Post"
 import { Header } from "./components/Header"
 import { Sidebar } from "./components/Sidebar";
 
+import narutoProfile from './assets/naruto-profile.jpg'
+
+
 import styles from './App.module.css'
 
 import './global.css';
@@ -14,8 +17,8 @@ const posts = [
   {
     id: 1,
     author: {
-      avatarUrl: '',
-      name: '',
+      avatarUrl: narutoProfile,
+      name: 'Naruto Uzumaki',
       role: 'Sétimo Hokage',
     },
     content: [
@@ -26,10 +29,10 @@ const posts = [
     publishedAt: new Date('2023-06-2 3 20:41:00')
   },
   {
-    id: 1,
+    id: 2,
     author: {
-      avatarUrl: '',
-      name: '',
+      avatarUrl: narutoProfile,
+      name: 'Naruto Uzumaki',
       role: 'Sétimo Hokage',
     },
     content: [
