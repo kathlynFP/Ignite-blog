@@ -5,7 +5,12 @@ import sasukeProfile from '../assets/sasuke-profile.jpg'
 import styles from './Comment.module.css';
 import { Avatar } from './Avatar';
 
-export const Comment = () => {
+export const Comment = ({content, onDeleteComment}) => {
+
+  const handleDeleteComment = () => {
+    onDeleteComment(content)
+  }
+
   return (
     <div className={styles.comment}>
 
@@ -20,12 +25,12 @@ export const Comment = () => {
               <time title="18 de junho às 08:13h" dateTime="2023-06-18 01:32:20" >Cerca de 1h atrás</time>
             </div>
 
-            <button title='Deletar comentário'>
+            <button onClick={handleDeleteComment} title='Deletar comentário'>
               <Trash size={24}></Trash>
             </button>
           </header>
 
-          <p>Muito bom parabens!!</p>
+          <p>{content}</p>
 
         </div>
 
